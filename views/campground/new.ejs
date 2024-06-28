@@ -1,0 +1,48 @@
+<% layout('./layouts/boilerplate') %>
+    <div class="p-4 row">
+        <h1 class="text-center my-4">New Campground Form</h1>
+        <div class="d-flex justify-content-center align-items-center col-md-6 offset-md-3">
+            <div class="p-4">
+                <form action="/campgrounds/new" method="POST" class="validate-form" enctype="multipart/form-data"
+                    novalidate>
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" name="campground[title]" id="title" class="form-control" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="mb-3 form-label">
+                        <label for="location">Location</label>
+                        <input type="text" name="campground[location]" id="location" class="form-control" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="mb-3 form-label">
+                        <label for="location">Description</label>
+                        <input type="text" name="campground[description]" id="description" class="form-control"
+                            required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="mb-3 form-label">
+                        <label for="location">Price</label>
+                        <input type="text" name="campground[price]" id="number" class="form-control" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="mb-3 form-label">
+                        <label for="location">Image</label>
+                        <input type="file" name="image" id="image" class="form-control" multiple>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
